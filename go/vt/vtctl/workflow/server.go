@@ -3710,10 +3710,13 @@ func (s *Server) prepareCreateLookup(ctx context.Context, workflow, keyspace str
 		if len(vindexFromCols) != 1 {
 			return nil, nil, nil, vterrors.Errorf(vtrpcpb.Code_INVALID_ARGUMENT, "unique vindex 'from' should have only one column")
 		}
+<<<<<<< HEAD
 	} else {
 		if len(vindexFromCols) < 2 {
 			return nil, nil, nil, vterrors.Errorf(vtrpcpb.Code_INVALID_ARGUMENT, "non-unique vindex 'from' should have more than one column")
 		}
+=======
+>>>>>>> 9a03317dcc (LookupVindex: fix CLI to allow creating non-unique lookups with single column (#17301))
 	}
 	vindexToCol = vindex.Params["to"]
 	// Make the vindex write_only. If one exists already in the vschema,

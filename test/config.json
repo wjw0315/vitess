@@ -1315,7 +1315,29 @@
 			"Args": ["vitess.io/vitess/go/test/endtoend/vreplication", "-run", "TestMoveTablesTZ"],
 			"Command": [],
 			"Manual": false,
+<<<<<<< HEAD
 			"Shard": "vreplication_migrate_vdiff2_convert_tz",
+=======
+			"Shard": "vreplication_vtctldclient_vdiff2_movetables_tz",
+			"RetryMax": 1,
+			"Tags": []
+		},
+		"loopkup_index": {
+			"File": "unused.go",
+			"Args": ["vitess.io/vitess/go/test/endtoend/vreplication", "-run", "TestLookupIndex"],
+			"Command": [],
+			"Manual": false,
+			"Shard": "vreplication_vtctldclient_vdiff2_movetables_tz",
+			"RetryMax": 1,
+			"Tags": []
+		},
+		"vtadmin": {
+			"File": "unused.go",
+			"Args": ["vitess.io/vitess/go/test/endtoend/vtadmin"],
+			"Command": [],
+			"Manual": false,
+			"Shard": "15",
+>>>>>>> 9a03317dcc (LookupVindex: fix CLI to allow creating non-unique lookups with single column (#17301))
 			"RetryMax": 1,
 			"Tags": []
 		},
